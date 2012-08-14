@@ -59,7 +59,7 @@ Audio::Audio()
     
     m_modPhase = 0;
     m_modFreq = m_freq * 0.25;
-    m_modGain = 0;
+    m_modGain = 1;
 }
 
 Audio::~Audio()
