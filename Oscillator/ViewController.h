@@ -10,4 +10,8 @@
 
 @interface ViewController : UIViewController
 
+- (IBAction)changeFreq:(id)sender;
+
+- (IBAction)switchToggled:(id)sender;
+
 @end

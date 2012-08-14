@@ -13,9 +13,13 @@
 		6374EA5015D9A921003D47D3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6374EA4E15D9A921003D47D3 /* InfoPlist.strings */; };
 		6374EA5215D9A921003D47D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6374EA5115D9A921003D47D3 /* main.m */; };
 		6374EA5615D9A921003D47D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6374EA5515D9A921003D47D3 /* AppDelegate.m */; };
-		6374EA5915D9A921003D47D3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6374EA5815D9A921003D47D3 /* ViewController.m */; };
+		6374EA5915D9A921003D47D3 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6374EA5815D9A921003D47D3 /* ViewController.mm */; };
 		6374EA5C15D9A921003D47D3 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6374EA5A15D9A921003D47D3 /* ViewController_iPhone.xib */; };
 		6374EA5F15D9A921003D47D3 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6374EA5D15D9A921003D47D3 /* ViewController_iPad.xib */; };
+		6374EA6815D9A95F003D47D3 /* mo_audio.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6374EA6615D9A95F003D47D3 /* mo_audio.mm */; };
+		6374EA6B15D9A977003D47D3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6374EA6915D9A977003D47D3 /* AudioToolbox.framework */; };
+		6374EA6C15D9A977003D47D3 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6374EA6A15D9A977003D47D3 /* CoreAudio.framework */; };
+		6374EA6F15D9A99B003D47D3 /* Audio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6374EA6E15D9A99B003D47D3 /* Audio.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,9 +34,16 @@
 		6374EA5415D9A921003D47D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6374EA5515D9A921003D47D3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6374EA5715D9A921003D47D3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6374EA5815D9A921003D47D3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6374EA5815D9A921003D47D3 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		6374EA5B15D9A921003D47D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		6374EA5E15D9A921003D47D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		6374EA6515D9A95F003D47D3 /* mo_audio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mo_audio.h; sourceTree = "<group>"; };
+		6374EA6615D9A95F003D47D3 /* mo_audio.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = mo_audio.mm; sourceTree = "<group>"; };
+		6374EA6715D9A95F003D47D3 /* mo_def.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mo_def.h; sourceTree = "<group>"; };
+		6374EA6915D9A977003D47D3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		6374EA6A15D9A977003D47D3 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		6374EA6D15D9A99B003D47D3 /* Audio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Audio.h; sourceTree = "<group>"; };
+		6374EA6E15D9A99B003D47D3 /* Audio.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Audio.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6374EA6B15D9A977003D47D3 /* AudioToolbox.framework in Frameworks */,
+				6374EA6C15D9A977003D47D3 /* CoreAudio.framework in Frameworks */,
 				6374EA4615D9A921003D47D3 /* UIKit.framework in Frameworks */,
 				6374EA4815D9A921003D47D3 /* Foundation.framework in Frameworks */,
 				6374EA4A15D9A921003D47D3 /* CoreGraphics.framework in Frameworks */,
@@ -52,6 +65,8 @@
 		6374EA3615D9A920003D47D3 = {
 			isa = PBXGroup;
 			children = (
+				6374EA6915D9A977003D47D3 /* AudioToolbox.framework */,
+				6374EA6A15D9A977003D47D3 /* CoreAudio.framework */,
 				6374EA4B15D9A921003D47D3 /* Oscillator */,
 				6374EA4415D9A921003D47D3 /* Frameworks */,
 				6374EA4215D9A920003D47D3 /* Products */,
@@ -79,12 +94,17 @@
 		6374EA4B15D9A921003D47D3 /* Oscillator */ = {
 			isa = PBXGroup;
 			children = (
+				6374EA6515D9A95F003D47D3 /* mo_audio.h */,
+				6374EA6615D9A95F003D47D3 /* mo_audio.mm */,
+				6374EA6715D9A95F003D47D3 /* mo_def.h */,
 				6374EA5415D9A921003D47D3 /* AppDelegate.h */,
 				6374EA5515D9A921003D47D3 /* AppDelegate.m */,
 				6374EA5715D9A921003D47D3 /* ViewController.h */,
-				6374EA5815D9A921003D47D3 /* ViewController.m */,
+				6374EA5815D9A921003D47D3 /* ViewController.mm */,
 				6374EA5A15D9A921003D47D3 /* ViewController_iPhone.xib */,
 				6374EA5D15D9A921003D47D3 /* ViewController_iPad.xib */,
+				6374EA6D15D9A99B003D47D3 /* Audio.h */,
+				6374EA6E15D9A99B003D47D3 /* Audio.cpp */,
 				6374EA4C15D9A921003D47D3 /* Supporting Files */,
 			);
 			path = Oscillator;
@@ -167,7 +187,9 @@
 			files = (
 				6374EA5215D9A921003D47D3 /* main.m in Sources */,
 				6374EA5615D9A921003D47D3 /* AppDelegate.m in Sources */,
-				6374EA5915D9A921003D47D3 /* ViewController.m in Sources */,
+				6374EA5915D9A921003D47D3 /* ViewController.mm in Sources */,
+				6374EA6815D9A95F003D47D3 /* mo_audio.mm in Sources */,
+				6374EA6F15D9A99B003D47D3 /* Audio.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

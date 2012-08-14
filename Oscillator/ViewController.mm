@@ -7,8 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "Audio.h"
 
 @interface ViewController ()
+{
+    Audio * audio;
+}
 
 @end
 
@@ -18,6 +22,30 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    audio = new Audio();
+}
+
+
+- (IBAction)changeFreq:(id)sender
+{
+    UISlider *myslider=(UISlider*)sender;
+    audio->setFreq(myslider.value);
+}
+
+- (IBAction)switchToggled:(id)sender
+{    
+    UISwitch *mySwitch=(UISwitch*)sender;
+    
+    bool isSwitchOn = [mySwitch isOn];
+
+    float myNewGain = 0.0;
+    
+    if ( isSwitchOn )
+        myNewGain = 1.0;
+    else
+        myNewGain = 0.0;
+        
+    audio->setGain(myNewGain);
 }
 
 - (void)viewDidUnload

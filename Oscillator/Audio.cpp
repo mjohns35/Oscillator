@@ -17,6 +17,28 @@ float sineOsc(float phase)
     return sinf(2*M_PI*phase);
 }
 
+float squareOsc(float phase)
+{
+    if(phase<0.5)
+    return 1;
+    else return -1;
+}
+
+float sawOsc(float phase)
+{
+        return (1-(4*(phase-0.5)));
+}
+
+
+float triangleOsc(float phase)
+{
+    if(phase<0.5)
+        return (-1+(4*phase));
+    else
+        return (1-(4*(phase-0.5)));
+}
+
+
 
 void g_callback( Float32 * buffer, UInt32 numFrames, void * userData )
 {
@@ -37,7 +59,7 @@ Audio::Audio()
     
     m_modPhase = 0;
     m_modFreq = m_freq * 0.25;
-    m_modGain = 1000;
+    m_modGain = 0;
 }
 
 Audio::~Audio()
